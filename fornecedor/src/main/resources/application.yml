@@ -1,0 +1,16 @@
+# porta que a aplicação do fornecedor vai subir
+server:
+  port: 8081
+
+# configurações do bd
+spring:
+  jpa:
+    hibernate:
+      ddl-auto: update # se nao existir, o jpa cria
+    show-sql: true
+  datasource:
+    url: jdbc:mysql://localhost:3306/fornecedor # o bd fornecedor deverá ser criado manualmente no MySQL
+    username: root
+    password: 
+    driver-class-name: com.mysql.cj.jdbc.Driver
+ 
