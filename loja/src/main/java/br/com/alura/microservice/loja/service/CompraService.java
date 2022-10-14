@@ -1,5 +1,6 @@
 package br.com.alura.microservice.loja.service;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpMethod;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
@@ -11,10 +12,14 @@ import br.com.alura.microservice.loja.controller.dto.InfoFornecedorDTO;
 @Service
 public class CompraService {
 
-	public void realizaCompra(CompraDTO compra) {
+	@Autowired
+	private RestTemplate cliente;
+	
+	
+	public void realizaCompra(CompraDTO compra) {//loja fazendo requisição para localizar o endereço do fornecedor
 
-		//loja fazendo requisição para localizar o endereço do fornecedor
-		RestTemplate cliente = new RestTemplate();
+		//RestTemplate nao consegue resolver por si próprio o enderelo do fornecedor (url:porta) mesmo com o eureka
+		/* RestTemplate cliente = new RestTemplate(); */
 		ResponseEntity<InfoFornecedorDTO> exchange 
 			= cliente.exchange("http://fornecedor/info/" + compra.getEndereco().getEstado()
 				, HttpMethod.GET
