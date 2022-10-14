@@ -56,6 +56,9 @@
 
 
 ### Service Registry com Eureka
+	- resolve o endereço (ip/porta) real dos ms. 
+	- http://localhost:8761/eureka/apps
+		- aplicações que se registram no eureka
 
 ### Spring Config Server
 
