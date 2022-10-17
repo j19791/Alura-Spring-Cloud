@@ -1,0 +1,11 @@
+# configurações do bd retiradas do filesystem da minha maquina local
+spring:
+  jpa:
+    hibernate:
+      ddl-auto: update # se nao existir, o jpa cria
+    show-sql: true
+  datasource:
+    url: jdbc:mysql://localhost:3306/fornecedor # o bd fornecedor deverá ser criado manualmente no MySQL
+    username: root
+    password: 
+    driver-class-name: com.mysql.cj.jdbc.Driver
