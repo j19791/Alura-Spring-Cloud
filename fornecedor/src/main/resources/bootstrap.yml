@@ -1,0 +1,9 @@
+# configurações do bd nao sao mais necessárias aqui pois agora o fornecedor vai acessar o spring config server
+spring:
+  application:
+    name: 'fornecedor'  #nome do arquivo yaml de config  
+  profiles:
+    active: default
+  cloud:
+    config:
+      url: http://localhost:8888

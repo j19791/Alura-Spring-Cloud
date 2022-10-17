@@ -2,11 +2,8 @@
 server:
   port: 8081
 
-# configurações do bd nao sao mais necessárias aqui pois agora o fornecedor vai acessar o spring config server
-spring:
-  application:
-    name: 'fornecedor'    
-
+#contexto anterior do spring que o ja levantado pela app : bootstrap
+# utilizar as configuracao do bootstrap.yml p/ o hibernata buscar as cfg do bd
 
     
 # registrar no eureka   
