@@ -1,0 +1,5 @@
+#o proprio ms do eureka nao deve se registrar no eureka
+eureka:  client:    fetch-registry: false
+    register-with-eureka: false
+    
+server:  port: 8761 # porta padrão do eureka server    
