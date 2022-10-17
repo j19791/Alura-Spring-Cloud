@@ -2,17 +2,8 @@
 server:
   port: 8081
 
-# configurações do bd
+# configurações do bd nao sao mais necessárias aqui pois agora o fornecedor vai acessar o spring config server
 spring:
-  jpa:
-    hibernate:
-      ddl-auto: update # se nao existir, o jpa cria
-    show-sql: true
-  datasource:
-    url: jdbc:mysql://localhost:3306/fornecedor # o bd fornecedor deverá ser criado manualmente no MySQL
-    username: root
-    password: 
-    driver-class-name: com.mysql.cj.jdbc.Driver
   application:
     name: 'fornecedor'    
 
