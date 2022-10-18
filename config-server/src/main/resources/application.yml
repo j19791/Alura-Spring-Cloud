@@ -1,13 +1,12 @@
 server:
   port: 8888
+
+
   
 spring:
-  profiles:
-    active: native # busca as cfg dentro do file system da maquina q tá rodadno o ms
   cloud:
     config:
       server:
-        # Migrando do file system local para o GitHub
-        git:
-          uri: https://github.com/j19791/Alura-Spring-Cloud/blob/main/microservice-repo
+        git:         # Migrando do file system local para o GitHub
+          uri: https://github.com/j19791/microservice-repo/
           search-paths:  fornecedor
